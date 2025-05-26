@@ -307,7 +307,7 @@ int main() {
   ***
  *****
 */
-
+/*
 int main() {
     int n;
     cin >> n;
@@ -332,3 +332,343 @@ int main() {
 
     return 0;
 }
+*/
+/*
+int main() {
+    int n;
+    cin >> n;
+
+    for (int i = 0; i < n; i++) {
+
+        
+        // print spaces
+        for (int j = 0; j < i ; j++) {
+            cout << " ";
+        }
+
+        // print stars
+        for (int j = 0; j < 2*n - (2 * i + 1); j++) {
+            cout << "*";
+        }
+
+        for (int j = 0; j < i; j++) {
+            cout << " ";
+        }
+
+        cout << endl;
+    }
+
+    return 0;
+}
+
+*/
+
+/*
+to print the pattern 
+    *
+   ***
+ *******
+ *******
+   ***
+    *
+
+*/
+/*
+
+int main() {
+    int n;
+    cin >> n;
+
+
+    for(int i = 0; i<n;i++){
+        // for printing spaces
+        for(int j = 0; j < n - i - 1;j++){
+            cout << " ";
+        }
+        //for priniting pattern
+        for(int j = 0; j < 2*i+1;j++){
+            cout << "*";
+        }
+        // for printing spaces
+        for(int j = 0; j < n - i - 1;j++){
+            cout << " ";
+        }
+        cout << endl;
+    }
+
+    for(int i = 0; i<n;i++){
+        // for printing spaces
+        for(int j = 0; j < i;j++){
+            cout << " ";
+        }
+        //for priniting pattern
+        for(int j = 0; j < 2*n - (2*i+1);j++){
+            cout << "*";
+        }
+        // for printing spaces
+        for(int j = 0; j < i;j++){
+            cout << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+
+*/
+
+// pattern to be printed 
+/*
+*
+**
+***
+****
+*****
+******
+*****
+****
+***
+**
+*
+*/
+/*
+int main() {
+    int n;
+    cin >> n;
+
+    for(int i =0; i <n; i++){
+        //for star pattern
+        for(int j=0;j<i;j++){
+            cout << "*";
+        }
+        cout << endl;
+
+    }
+        for(int i =0; i <n; i++){
+            cout << "*";
+    }
+        cout << endl;
+
+        for(int i =0; i <n; i++){
+        //for star pattern
+        for(int j=0;j<n-i-1;j++){
+            cout << "*";
+        }
+        cout << endl;
+    }
+        
+
+
+    return 0;
+    }
+*/
+
+// pattern to be printed
+/*
+1
+0 1
+1 0 1
+0 1 0 1
+1 0 1 0 1
+*/
+/*
+int main() {
+    int n;
+    cin >> n;
+    int start = 1;
+
+    for(int i=0;i<n;i++){
+        if(i%2==0){
+            start = 1;
+        }
+        else{
+            start = 0;
+        }
+        for(int j=0;j<=i;j++){
+            cout << start;
+            start = 1 - start;
+        }
+    cout<< endl;
+    }
+
+    return 0;
+    }
+*/
+
+//pattern to be printed
+/*
+1      1
+12    21
+123  321
+12344321
+*/
+/*
+int main() {
+    int n;
+    cin >> n;
+
+    int space = 2*(n - 1);
+    for(int i = 1;i<=n;i++){
+        for(int j=1;j<=i;j++){
+            cout << j;
+            cout << " ";
+        }
+        for(int j=1;j<=space;j++){
+            cout << " ";
+        }
+        for(int j=i;j>=1;j--){
+            cout << " ";
+            cout << j;
+        }
+        cout<< endl;
+        space -= 2;
+    }
+
+
+    return 0;
+    }
+*/
+
+// pattern to print
+/*
+1
+2 3
+4 5 6
+7 8 9 10
+11 12 13 14 15
+*/
+/*
+int main() {
+    int n;
+    cin >> n;
+    int num = 1;
+
+    for(int i=0;i<n;i++){
+        for(int j=0;j<i;j++){
+            cout << num;
+            cout << " ";
+            num++;
+        }
+        cout << endl;
+    }
+
+    return 0;
+    }
+*/
+
+//pattern to print
+/*
+A
+A B
+A B C
+A B C D
+A B C D E
+*/
+/*
+int main() {
+    int n;
+    cin >> n;
+    for(int i=0;i<n;i++){
+        char alph = 'A';
+        for(int j=0;j<i;j++){
+            cout << alph;
+            cout << " ";
+            alph++;
+        }
+        cout << endl;
+    }
+
+    return 0;
+    }
+*/
+
+//pattern to print
+/*
+A B C D E
+A B C D
+A B C
+A B 
+A
+*/
+/*
+int main() {
+    int n;
+    cin >> n;
+    for(int i=0;i<n;i++){
+        char alph = 'A';
+        for(int j=0;j<=n-i-1;j++){
+            cout << alph;
+            cout << " ";
+            alph++;
+        }
+        cout << endl;
+    }
+
+    return 0;
+    }
+*/
+
+//pattern to print
+/*
+A
+B B
+C C C
+D D D D
+E E E E E
+*/
+/*
+int main() {
+    int n;
+    cin >> n;
+    char alph = 'A';
+    for(int i=0;i<n;i++){
+        for(int j=0;j<=i;j++){
+            cout << alph;
+            cout << " ";
+        }
+        alph++;
+        cout << endl;
+    }
+
+    return 0;
+    }
+*/
+
+//pattern to print
+/*
+   A
+  ABA
+ ABCBA
+*/
+
+int main() {
+    int n;
+    cin >> n;
+    for(int i=0;i<n;i++){
+        char alph = 'A';
+        // FOR SPACES
+        for(int j=0;j<=n-i-1;j++){
+            cout << " ";
+        }
+
+        for(int j=0;j<(2*i+1);j++){
+            cout << alph;
+            alph++;
+        }
+
+        for(int j=0;j<=n-i-1;j++){
+            cout << " ";
+        }
+
+        cout << endl;
+    }
+
+    return 0;
+    }
+
+
+
+
+
+
+
