@@ -640,7 +640,7 @@ int main() {
   ABA
  ABCBA
 */
-
+/*
 int main() {
     int n;
     cin >> n;
@@ -665,6 +665,217 @@ int main() {
 
     return 0;
     }
+*/
+
+//Pattern to print
+/*
+E
+D E
+C D E
+B C D E
+A B C D E
+*/
+/*
+int main() {
+    int n;
+    cin >> n;
+    char last = 'A' + n - 1;
+    for(int i=0;i<n;i++){
+        char start = last - i;
+        for(int j=0;j<=i;j++){
+            cout << start;
+            cout << " ";
+            start++;
+            }
+        
+        cout << endl;
+        }
+    return 0;
+    }
+*/
+
+//pattern to print
+/*
+************
+*****  *****
+****    ****
+***      ***
+**        **
+*          *
+*          *
+**        **
+***      ***
+****    ****
+*****  *****
+************
+*/
+/*
+int main() {
+    int n;
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+
+    for (int j = 0; j <= n - i - 1; j++) {
+        cout << "*";
+        if(j!=n){
+            cout<< " ";
+        }
+    }
+
+    for (int j = 2; j < 2 * (i + 1); j++) {
+        cout << "  ";
+    }
+
+    for (int j = 0; j <= n - i - 1; j++) {
+        cout << "* ";
+    }
+
+    cout << endl;
+}
+
+for (int i = 0; i < n; i++) {
+
+    for (int j = 0; j <= i; j++) {
+        cout << "*";
+        if(j!=n){
+            cout<< " ";
+        }
+    }
+
+    for (int j = 2; j <= 2 * n - (2 * i + 1); j++) {
+        cout << "  ";
+    }
+
+    for (int j = 0; j <= i; j++) {
+        cout << "*";
+        cout << " ";
+    }
+
+    cout << endl;
+}
+
+
+
+        return 0;
+}
+*/
+/*
+
+int main() {
+    int n;
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+
+    for (int j = 0; j <= i; j++) {
+        cout << "*";
+        if(j!=n){
+            cout<< " ";
+        }
+    }
+
+    for (int j = 2; j <= 2 * n - (2 * i + 1); j++) {
+        cout << "  ";
+    }
+
+    for (int j = 0; j <=i; j++) {
+        cout << "*";
+        cout << " ";
+    }
+
+    cout << endl;
+}
+
+
+for (int i = 0; i < n; i++) {
+
+    for (int j = 0; j < n - i - 1; j++) {
+        cout << "* ";
+    }
+
+    for (int j = 2; j <= 2 * (i + 1); j++) {
+        cout << "  ";
+    }
+
+    for (int j = 0; j < n - i - 1; j++) {
+        if(j==0){
+            cout << " ";
+        }
+        cout << " *";
+    }
+
+    cout << endl;
+}
+        return 0;
+}
+*/
+
+//pattern to print
+/*
+******
+*    *
+*    *
+*    *
+*    *
+******
+*/
+/*
+int main() {
+    int n;
+    cin >> n;
+    for(int i=0;i<n;i++){
+        if(i==0 || i==n-1){
+        for(int j=0;j<n;j++){
+            cout << "*";
+        }
+    }
+    else{
+        for(int j=0;j<n;j++){
+            if(j==0 || j==n-1){
+            cout << "*";
+            }
+            else{
+                cout << " ";
+            }
+        }
+    }
+    cout << endl;
+    }
+
+        return 0;
+}
+*/
+
+//pattern to print
+/*
+3 3 3 3 3
+3 2 2 2 3
+3 2 1 2 3
+3 2 2 2 3
+3 3 3 3 3
+*/
+
+int main() {
+    int n;
+    cin >> n;
+    int start = 2*n - 1;
+    for(int i=0;i<start;i++){
+        for(int j=0;j<start;j++){
+            int top = i;
+            int left = j;
+            int bottom = start - 1 - i;
+            int right = start - 1 -j;
+
+            int layer = n - min(min(top,bottom),min(left,right));
+            cout << layer << " ";
+            
+
+        }
+    cout << endl;
+    }
+
+        return 0;
+}
+
 
 
 
